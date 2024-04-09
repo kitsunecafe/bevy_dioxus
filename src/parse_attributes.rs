@@ -233,6 +233,11 @@ fn parse_val(val: &str) -> Val {
             return Val::Px(val);
         }
     }
+    if let Some((val, "")) = val.split_once("%") {
+        if let Ok(val) = val.parse::<f32>() {
+            return Val::Percent(val);
+        }
+    }
     if let Some((val, "")) = val.split_once("vw") {
         if let Ok(val) = val.parse::<f32>() {
             return Val::Vw(val);

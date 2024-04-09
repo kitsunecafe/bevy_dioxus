@@ -2,7 +2,7 @@ mod apply_mutations;
 pub mod colors;
 mod deferred_system;
 mod ecs_hooks;
-pub mod elements;
+mod elements;
 #[macro_use]
 mod events;
 #[cfg(feature = "hot_reload")]
@@ -41,6 +41,7 @@ pub mod prelude {
         // use_event_reader, TODO
     };
     pub use super::elements::*;
+    pub use super::elements::dioxus_elements;
     pub use super::{DioxusUiBundle, DioxusUiPlugin, DioxusUiRoot};
     pub use bevy_mod_picking::pointer::PointerButton;
     pub use dioxus;
