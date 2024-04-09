@@ -2,7 +2,7 @@ mod apply_mutations;
 pub mod colors;
 mod deferred_system;
 mod ecs_hooks;
-mod elements;
+pub mod elements;
 #[macro_use]
 mod events;
 #[cfg(feature = "hot_reload")]
